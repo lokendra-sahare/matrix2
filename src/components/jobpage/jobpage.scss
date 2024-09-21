@@ -1,0 +1,270 @@
+.jobPage {
+  width: 70%;
+  margin: auto;
+  padding-bottom: 50px;
+
+  /* Sidebar Toggle Icon */
+  .home-icon {
+    position: fixed;
+    top: 24px;
+    right: 15px;
+    z-index: 1000;
+    font-size: 30px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* Sidebar Styles */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: -450px; /* Hidden by default */
+    width: 400px;
+    height: 100%;
+    background-color: #f8f9fa;
+    box-shadow: -3px 0 5px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease-in-out;
+    padding: 20px;
+    z-index: 999;
+
+    .form-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 45px;
+
+      h5 {
+        font-size: 35px;
+      }
+
+      form {
+        width: 80%;
+
+        div {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          font-size: 1rem;
+          margin-bottom: 20px;
+
+          input,
+          select {
+            width: 100%;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+            background-color: #f7f9fa;
+            transition: border 0.3s ease-in-out;
+          }
+        }
+
+        button {
+          padding: 15px 30px;
+          font-size: 1.2rem;
+          font-weight: bold;
+          border: none;
+          border-radius: 50px;
+          background-color: #3498db;
+          color: white;
+          cursor: pointer;
+          transition: background-color 0.3s ease-in-out;
+          width: 100%;
+        }
+
+        .eligible,
+        .not-eligible {
+          padding-top: 30px;
+          text-align: center;
+          font-size: 22px;
+        }
+      }
+    }
+  }
+
+  .sidebar.open {
+    right: 0; /* Sidebar slides in */
+  }
+
+  /* Job Page Content Styles */
+  .jobContentContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    hr {
+      width: 95%;
+      margin: auto;
+      opacity: 0.5;
+    }
+
+    .ContentContainer {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .job-title {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        font-size: 26px;
+
+        .color {
+          color: #09f;
+          margin-left: 10px;
+        }
+      }
+
+      .job-description {
+        display: flex;
+        justify-content: center;
+        font-size: 20px;
+        color: #3e3737;
+        gap: 71px;
+
+        .description-title {
+          flex-basis: 83%;
+        }
+      }
+
+      .applicationDate,
+      .endingDate,
+      .qualification {
+        display: flex;
+        font-size: 20px;
+        color: rgb(6, 136, 6);
+        font-weight: bolder;
+        gap: 63px;
+      }
+
+      .endingDate {
+        color: red;
+        gap: 32px;
+      }
+
+      .qualification {
+        gap: 23px;
+
+        color: brown;
+      }
+    }
+
+    .age-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      h2 {
+        text-align: center;
+        font-size: 40px;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        li {
+          font-size: 20px;
+          div {
+            display: flex;
+            color: rgb(6, 136, 6);
+            font-weight: bolder;
+            gap: 63px;
+          }
+
+          .max-age {
+            color: red;
+          }
+        }
+      }
+    }
+
+    .myButton {
+      margin: auto;
+      width: 45%;
+      display: flex;
+      justify-content: center;
+
+      a {
+        text-decoration: none;
+        color: inherit;
+
+        .button {
+          all: unset;
+          display: flex;
+          align-items: center;
+          position: relative;
+          padding: 0.6em 2em;
+          border: #3498db solid 0.15em;
+          border-radius: 1em;
+          color: #3498db;
+          font-size: 1.5em;
+          font-weight: 600;
+          cursor: pointer;
+          overflow: hidden;
+          transition: border 300ms, color 300ms;
+          user-select: none;
+        }
+
+        .button p {
+          z-index: 1;
+        }
+
+        .button:hover {
+          color: white;
+        }
+
+        .button:active {
+          border-color: teal;
+        }
+
+        .button::after,
+        .button::before {
+          content: "";
+          position: absolute;
+          width: 9em;
+          aspect-ratio: 1;
+          background: #3498db;
+          opacity: 50%;
+          border-radius: 50%;
+          transition: transform 500ms, background 300ms;
+        }
+
+        .button::before {
+          left: 0;
+          transform: translateX(-8em);
+        }
+
+        .button::after {
+          right: 0;
+          transform: translateX(8em);
+        }
+
+        .button:hover:before {
+          transform: translateX(0);
+        }
+
+        .button:hover:after {
+          transform: translateX(0);
+        }
+      }
+    }
+  }
+}

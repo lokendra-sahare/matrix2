@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-align: y mandatory;
+}
+
+body {
+  background: #f4f4f4;
+}
+
+section {
+  min-height: 100vh;
+}
+
+.carousel-section {
+  height: 100vh;
+}
