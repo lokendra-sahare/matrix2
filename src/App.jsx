@@ -1,5 +1,5 @@
 // src/App.jsx
-import "./app.css";
+import "./App.css";
 import React from "react";
 import Navbar from "./components/navbar/Navbar";
 import Crousel from "./components/crousel/Crousel";
