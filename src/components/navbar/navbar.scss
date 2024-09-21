@@ -69,20 +69,25 @@
       flex-direction: column;
       padding: 5px;
 
-      .resultItem {
-        min-height: 45px;
-        width: 100%;
-        padding: 10px;
-        border-bottom: 1px solid #ccc;
-        z-index: 99999;
-        cursor: pointer;
-        margin-bottom: 5px;
-        background: rgba(232, 232, 232, 0.35);
-        // color: white;
-        border-radius: 8px;
+      a {
+        text-decoration: none;
+        color: inherit;
 
-        &:hover {
-          background-color: #e0e0e0;
+        .resultItem {
+          min-height: 45px;
+          width: 100%;
+          padding: 10px;
+          border-bottom: 1px solid #ccc;
+          z-index: 99999;
+          cursor: pointer;
+          margin-bottom: 5px;
+          background: rgba(232, 232, 232, 0.35);
+          // color: white;
+          border-radius: 8px;
+
+          &:hover {
+            background-color: #e0e0e0;
+          }
         }
       }
 

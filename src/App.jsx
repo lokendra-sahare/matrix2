@@ -25,7 +25,6 @@ function App() {
             </>
           }
         />
-        {/* Ensure the path parameter is 'jobId' for consistency */}
         <Route path="/job/:jobId" element={<JobPage />} />
       </Routes>
     </Router>
