@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { examsData } from "../../data/examData";
 import { Link } from "react-router-dom";
-import "./EligibilitySearch.scss";
+import "./eligibilitySearch.scss";
 
 const EligibilitySearch = () => {
   const [age, setAge] = useState("");
